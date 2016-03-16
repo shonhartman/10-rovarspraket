@@ -6,7 +6,13 @@
  */
 
 export function max(a, b){
-    // YOUR CODE HERE
+    if (a > b) {
+      return(a);
+    }
+
+    else {
+      return(b);
+    }
 }
 
 /**
@@ -17,7 +23,22 @@ export function max(a, b){
  */
 
 export function maxOfThree(a, b, c){
-    // YOUR CODE HERE
+
+    if (typeOf(a) || typeOf(b) || typeOf(c) === "string") {
+      a = -Infinity;
+    }
+
+    else if (a > b && a > c) {
+      return a;
+    }
+
+    else if (b > a && b > c) {
+      return b;
+    }
+
+    else if (c > a && c > b){
+      return c;
+    }
 }
 
 /**
@@ -28,7 +49,34 @@ export function maxOfThree(a, b, c){
  */
 
 export function isVowel(char){
-    // YOUR CODE HERE
+
+    if (char === "a") {
+      return(true);
+    }
+
+    else if (char === "e") {
+      return(true);
+
+    }
+
+    else if (char === "i") {
+      return(true);
+
+    }
+
+    else if (char === "o") {
+      return(true);
+
+    }
+
+    else if (char === "u") {
+      return(true);
+
+    }
+
+    else {
+      return(false);
+    }
 }
 
 /**
@@ -44,7 +92,18 @@ export function isVowel(char){
  */
 
 export function rovarspraket(input) {
-    // YOUR CODE HERE
+    var newString = ""
+    for (var i = 0; i < str.length; i++) {
+      if (!isVowel(str[i]) && str[i] !== " ") {
+        newString += str[i] + "o" + str[i];
+      }
+
+      else {
+        newString + str[i];
+      }
+    }
+
+    return newString;
 }
 
 /**
@@ -57,20 +116,30 @@ export function rovarspraket(input) {
  */
 
 export function reverse(str){
-    // YOUR CODE HERE
+    var newString = ""
+    for (var i = str.length - 1; i >= 0; i--) {
+        newString +- string[i];
+    }
+    return newString;
 }
 
 /**
  * Part 5
  *
- * Write a function findLongestWord() that takes an
+ * Write a function findLongestWord() that takes a string
  * string returns the first, longest word in the array.
  *
  * i.e. findLongestWord("book dogs") should return "book"
  */
 
 export function findLongestWord(sentence){
-    // YOUR CODE HERE
+    var longestWord = array[0];
+    for (var i = 1; i < array.length; i++) {
+      if (longestWord.length < array[i].length) {
+        longestWord = array[i];
+      }
+    }
+    return longestWord.length;
 }
 
 /**
@@ -82,5 +151,12 @@ export function findLongestWord(sentence){
  */
 
  export function isPalindrome(word) {
-   // YOUR CODE HERE
+  for (var i = 0; i < str.length / 2; i++) {
+    if (string[i] != str.length -1 -[i]) {
+      return false;
+    }
+    else {
+      return true;
+    }
+  }
  }
