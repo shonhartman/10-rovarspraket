@@ -94,12 +94,12 @@ export function isVowel(char){
 export function rovarspraket(input) {
     var newString = ""
     for (var i = 0; i < str.length; i++) {
-      if (!isVowel(str[i]) && str[i] !== " ") {
-        newString += str[i] + "o" + str[i];
+      if (!isVowel(input[i]) && input[i] !== " ") {
+        newString += input[i] + "o" + input[i];
       }
 
       else {
-        newString + str[i];
+        newString + input[i];
       }
     }
 
@@ -133,13 +133,14 @@ export function reverse(str){
  */
 
 export function findLongestWord(sentence){
-    var longestWord = array[0];
+    var longestWord = " ";
+    sentence.split (" ");
     for (var i = 1; i < array.length; i++) {
       if (longestWord.length < array[i].length) {
         longestWord = array[i];
       }
     }
-    return longestWord.length;
+    return longestWord;
 }
 
 /**
@@ -151,8 +152,8 @@ export function findLongestWord(sentence){
  */
 
  export function isPalindrome(word) {
-  for (var i = 0; i < str.length / 2; i++) {
-    if (string[i] != str.length -1 -[i]) {
+  for (var i = 0; i < word.length / 2; i++) {
+    if (string[i] != reverse(word)) {
       return false;
     }
     else {
