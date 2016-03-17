@@ -24,11 +24,7 @@ export function max(a, b){
 
 export function maxOfThree(a, b, c){
 
-    if (typeOf(a) || typeOf(b) || typeOf(c) === "string") {
-      a = -Infinity;
-    }
-
-    else if (a > b && a > c) {
+    if (a > b && a > c) {
       return a;
     }
 
@@ -50,26 +46,26 @@ export function maxOfThree(a, b, c){
 
 export function isVowel(char){
 
-    if (char === "a") {
+    if (char === "a" || "A") {
       return(true);
     }
 
-    else if (char === "e") {
-      return(true);
-
-    }
-
-    else if (char === "i") {
+    else if (char === "e" || "E") {
       return(true);
 
     }
 
-    else if (char === "o") {
+    else if (char === "i" || "I") {
       return(true);
 
     }
 
-    else if (char === "u") {
+    else if (char === "o" || "O") {
+      return(true);
+
+    }
+
+    else if (char === "u" || "U") {
       return(true);
 
     }
@@ -93,7 +89,7 @@ export function isVowel(char){
 
 export function rovarspraket(input) {
     var newString = ""
-    for (var i = 0; i < str.length; i++) {
+    for (var i = 0; i < input.length; i++) {
       if (!isVowel(input[i]) && input[i] !== " ") {
         newString += input[i] + "o" + input[i];
       }
@@ -118,7 +114,7 @@ export function rovarspraket(input) {
 export function reverse(str){
     var newString = ""
     for (var i = str.length - 1; i >= 0; i--) {
-        newString +- string[i];
+        newString +- str[i];
     }
     return newString;
 }
@@ -134,10 +130,10 @@ export function reverse(str){
 
 export function findLongestWord(sentence){
     var longestWord = " ";
-    sentence.split (" ");
+    var split = sentence.split (" ");
     for (var i = 1; i < array.length; i++) {
-      if (longestWord.length < array[i].length) {
-        longestWord = array[i];
+      if (longestWord.length < split[i].length) {
+        longestWord = split[i];
       }
     }
     return longestWord;
@@ -153,11 +149,11 @@ export function findLongestWord(sentence){
 
  export function isPalindrome(word) {
   for (var i = 0; i < word.length / 2; i++) {
-    if (string[i] != reverse(word)) {
-      return false;
+    if (word === reverse(word)) {
+      return true;
     }
     else {
-      return true;
+      return false;
     }
   }
  }
