@@ -46,26 +46,26 @@ export function maxOfThree(a, b, c){
 
 export function isVowel(char){
 
-    if (char === "a" || "A") {
+    if (char === "a" || char === "A") {
       return(true);
     }
 
-    else if (char === "e" || "E") {
-      return(true);
-
-    }
-
-    else if (char === "i" || "I") {
+    else if (char === "e" || char === "E") {
       return(true);
 
     }
 
-    else if (char === "o" || "O") {
+    else if (char === "i" || char === "I") {
       return(true);
 
     }
 
-    else if (char === "u" || "U") {
+    else if (char === "o" || char === "O") {
+      return(true);
+
+    }
+
+    else if (char === "u" || char === "U") {
       return(true);
 
     }
@@ -114,7 +114,7 @@ export function rovarspraket(input) {
 export function reverse(str){
     var newString = ""
     for (var i = str.length - 1; i >= 0; i--) {
-        newString +- str[i];
+        newString += str[i];
     }
     return newString;
 }
@@ -148,12 +148,12 @@ export function findLongestWord(sentence){
  */
 
  export function isPalindrome(word) {
-  for (var i = 0; i < word.length / 2; i++) {
+
     if (word === reverse(word)) {
       return true;
     }
     else {
       return false;
     }
-  }
+
  }
