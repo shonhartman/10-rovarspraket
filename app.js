@@ -95,7 +95,7 @@ export function rovarspraket(input) {
       }
 
       else {
-        newString + input[i];
+        newString += input[i];
       }
     }
 
@@ -131,7 +131,7 @@ export function reverse(str){
 export function findLongestWord(sentence){
     var longestWord = " ";
     var split = sentence.split (" ");
-    for (var i = 1; i < array.length; i++) {
+    for (var i = 1; i < split.length; i++) {
       if (longestWord.length < split[i].length) {
         longestWord = split[i];
       }
